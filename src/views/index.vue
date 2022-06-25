@@ -8,15 +8,15 @@
 				<span>Animations</span>
 			</p>
 			<div class="intro">
-				<button class="myBtn md:py-6 md:px-12 font-bold border-2 text-xs md:text-base" @click="fadeOut">EXPLORE</button>
+				<button class="myBtn md:py-6 py-3 md:px-12 px-6 font-bold border-2 text-xs md:text-base" @click="fadeOut">EXPLORE</button>
 			</div>
 		</div>
 
 		<div class="overlay-2"></div>
 
-		<div class="content">
-			<h1>Landing Page</h1>
-			<p class="data">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eaque blanditiis culpa, voluptate reprehenderit sapiente quibusdam odio eum beatae autem quaerat tempora et vitae sint, porro assumenda distinctio eos?
+		<div class="content p-5 pt-10">
+			<h1 class="text-5xl font-bold uppercase mb-5">Enjoy!</h1>
+			<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eaque blanditiis culpa, voluptate reprehenderit sapiente quibusdam odio eum beatae autem quaerat tempora et vitae sint, porro assumenda distinctio eos?
 				Nesciunt!</p>
 		</div>
 	</div>
@@ -26,44 +26,40 @@
 import {gsap} from 'gsap'
 const fadeOut =()=> {
 
-	gsap.to('.myBtn', 1, {
+	gsap.to('.myBtn', 0.5, {
 		y: -100,
 		opacity: 0
 	})
 
-	gsap.to('.screen', 2, {
+	gsap.to('.screen', 1, {
 		y: -400,
 		opacity: 0,
 		ease: 'Power2.easeInOut',
-		delay: 1.5
+		delay: 0.5
 	})
 
-	gsap.from('.overlay', 2, {
-		ease: 'Power2.easeInOut'
-	})
-
-	gsap.to('.overlay', 2, {
-		delay: 2,
+	gsap.to('.overlay', 1, {
+		delay: 1,
 		top: '-100%',
 		ease: 'Expo.easeInOut'
 	})
 
-	gsap.to('.overlay-2', 2, {
-		delay: 3,
+	gsap.to('.overlay-2', 1, {
+		delay: 1.5,
 		top: '-110%',
-		ease: 'Expo.easeInOut'
+		ease: 'Expo.easeInOut',
+		duration:0.1
 	})
 
-	gsap.from('.content', 2, {
-		delay: 3.2,
+	gsap.from('.content', 1, {
+		delay: 2,
 		opacity: 0,
 		ease: 'Power2.easeInOut'
 	})
 
-	gsap.to('.content', 2, {
+	gsap.to('.content', 1, {
 		opacity: 1,
-		y: -300,
-		delay: 3.2,
+		delay: 2,
 		ease: 'Power2.easeInOut'
 	})
 
@@ -74,46 +70,15 @@ const fadeOut =()=> {
 <style scoped>
 
 
-.content {
-     width: 60%;
-     margin: 0 auto;
-     z-index: -1;
-     position: absolute;
-     top: 60%;
-     left: 10%;
-     transform: translate(0, -50%);
-}
-
-.content h1 {
-     font-family: Poppins;
-     font-size: 54px;
-     color: #101010;
-     font-weight: 700;
-     text-transform: uppercase;
-     margin-bottom: 10px;
-}
-
-.content p {
-     margin-top: 0;
-     text-align: left;
-     color: #101010;
-     font-weight: 400;
-}
 
 .overlay-2 {
      z-index: 0;
      position: absolute;
      width: 100%;
      height: 100vh;
-     background: #50a9a6;
+     background: #59b0ad;
+
 }
-
-
-
-
-
-
-
 
 button {
      letter-spacing: 6px;
