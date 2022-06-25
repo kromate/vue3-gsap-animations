@@ -1,8 +1,8 @@
 <template>
 	<div class="container">
 
-		<div class="overlay">
-			<p class="screen">EXPLORE</p>
+		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center">
+			<p class="screen text-[#323232]">EXPLORE</p>
 			<div class="intro">
 				<button class="myBtn" @click="fadeOut">EXPLORE</button>
 			</div>
@@ -39,8 +39,8 @@ const fadeOut =()=> {
 	})
 
 	gsap.to('.overlay', 2, {
-		delay: 2.6,
-		top: '-110%',
+		delay: 2,
+		top: '-100%',
 		ease: 'Expo.easeInOut'
 	})
 
@@ -68,18 +68,7 @@ const fadeOut =()=> {
 </script>
 
 <style scoped>
-html, body {
-     margin: 0;
-     padding: 0;
-     width: 100%;
-     height: 100%;
-}
 
-body {
-     cursor: crosshair;
-     font-family: Poppins;
-     background: url(hero.jpg) no-repeat 50% 50%;
-}
 
 .content {
      width: 60%;
@@ -112,30 +101,17 @@ body {
      position: absolute;
      width: 100%;
      height: 100vh;
-     background: #48A9A6;
+     background: #50a9a6;
 }
 
-.overlay {
-     z-index: 1;
-     position: absolute;
-     width: 100%;
-     height: 100vh;
-     background: #101010;
-}
+
 
 .overlay p {
      font-size: 300px;
      font-weight: 800;
 }
 
-.screen {
-     color: #323232;
-     font-family: Poppins;
-     position: absolute;
-     top: 12%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-}
+
 
 .myBtn {
      font-family: Poppins;
