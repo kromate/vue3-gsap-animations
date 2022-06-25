@@ -1,5 +1,5 @@
 <template>
-	<div class="container overflow-hidden">
+	<div class="container overflow-hidden h-screen bg-white">
 
 		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center flex flex-col md:flex-row gap-5">
 			<p class="screen text-[#323232] font-extrabold md:text-9xl text-[55px] leading-[60px] flex flex-col ">
