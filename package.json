@@ -10,7 +10,6 @@
   "dependencies": {
     "@types/node": "^17.0.40",
     "@vueuse/core": "^8.7.5",
-    "eslint": "^8.17.0",
     "gsap": "^3.10.4",
     "vue": "^3.2.25",
     "vue-router": "^4.0.16"
