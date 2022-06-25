@@ -1,0 +1,11 @@
+/* @import url(''); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: 'Chakra Petch', sans-serif;
+}
+@layer utilities {
+}
