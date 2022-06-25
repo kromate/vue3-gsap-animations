@@ -1,14 +1,14 @@
 <template>
 	<div class="container overflow-hidden">
 
-		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center">
-			<p class="screen text-[#323232] font-extrabold md:text-9xl text-6xl flex flex-col ">
+		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center flex flex-col md:flex-row gap-5">
+			<p class="screen text-[#323232] font-extrabold md:text-9xl text-[55px] leading-[60px] flex flex-col ">
 				<span >Vue 3</span>
 				<span>Gsap</span>
 				<span>Animations</span>
 			</p>
 			<div class="intro">
-				<button class="myBtn" @click="fadeOut">EXPLORE</button>
+				<button class="myBtn md:py-6 md:px-12 font-bold border-2 text-xs md:text-base" @click="fadeOut">EXPLORE</button>
 			</div>
 		</div>
 
@@ -116,14 +116,8 @@ const fadeOut =()=> {
 
 
 button {
-     display: block;
-     padding: 24px 48px;
-     font-family: Poppins;
-     font-weight: 700;
-     font-size: 12px;
      letter-spacing: 6px;
      color: #fff;
-     border: 2px solid #fff;
      text-transform: uppercase;
      outline: none;
      overflow: hidden;
@@ -148,7 +142,7 @@ button {
      right: 0;
      top: 100%;
      z-index: -1;
-     transition: top 0.8s ease-out;
+     transition: top 0.65s ease-out;
 }
 
 .myBtn:hover:before {
