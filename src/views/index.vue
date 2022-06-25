@@ -14,7 +14,7 @@
 
 		<div class="overlay-2"></div>
 
-		<div class="content p-5 pt-10">
+		<div class="content bg-white h-screen w-full px-5 pt-10">
 			<h1 class="text-5xl font-bold uppercase mb-5">Enjoy!</h1>
 			<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eaque blanditiis culpa, voluptate reprehenderit sapiente quibusdam odio eum beatae autem quaerat tempora et vitae sint, porro assumenda distinctio eos?
 				Nesciunt!</p>
