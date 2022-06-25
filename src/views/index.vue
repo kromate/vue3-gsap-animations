@@ -40,7 +40,7 @@ const fadeOut =()=> {
 
 	gsap.to('.overlay', 1, {
 		delay: 1,
-		top: '-100%',
+		top: '-110%',
 		ease: 'Expo.easeInOut'
 	})
 
