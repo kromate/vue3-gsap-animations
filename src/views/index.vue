@@ -1,8 +1,12 @@
 <template>
-	<div class="container">
+	<div class="container overflow-hidden">
 
 		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center">
-			<p class="screen text-[#323232]">EXPLORE</p>
+			<p class="screen text-[#323232] font-extrabold md:text-9xl text-6xl flex flex-col ">
+				<span >Vue 3</span>
+				<span>Gsap</span>
+				<span>Animations</span>
+			</p>
 			<div class="intro">
 				<button class="myBtn" @click="fadeOut">EXPLORE</button>
 			</div>
@@ -31,7 +35,7 @@ const fadeOut =()=> {
 		y: -400,
 		opacity: 0,
 		ease: 'Power2.easeInOut',
-		delay: 2
+		delay: 1.5
 	})
 
 	gsap.from('.overlay', 2, {
@@ -106,20 +110,10 @@ const fadeOut =()=> {
 
 
 
-.overlay p {
-     font-size: 300px;
-     font-weight: 800;
-}
 
 
 
-.myBtn {
-     font-family: Poppins;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-}
+
 
 button {
      display: block;
@@ -142,6 +136,7 @@ button {
 .myBtn:hover {
      color: #101010;
      cursor: crosshair;
+     border: 2px solid #101010;
 }
 
 .myBtn:before {
