@@ -94,7 +94,7 @@ button {
 
 .myBtn:hover {
      color: #101010;
-     cursor: crosshair;
+     cursor: pointer;
      border: 2px solid #101010;
 }
 
