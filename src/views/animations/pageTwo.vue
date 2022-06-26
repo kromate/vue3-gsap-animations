@@ -48,6 +48,12 @@ onMounted(() => {
 			duration: 1.2,
 		}
 	)
+
+	timeline.fromTo('.heading', {},{})
+	timeline.fromTo('.sub-heading', {},{})
+	timeline.fromTo('.loader', {},{})
+	timeline.fromTo('.loader-wrapper', {},{})
+	timeline.fromTo('p', {},{})
 })
 </script>
 
