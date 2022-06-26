@@ -13,9 +13,7 @@
 		"gsap": "^3.10.4",
 		"scss": "^0.2.4",
 		"vue": "^3.2.25",
-		"vue-router": "^4.0.16",
-		"monaco-editor": "^0.25.2",
-		"split.js": "^1.6.4"
+		"vue-router": "^4.0.16"
 	},
 	"devDependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.25.0",
