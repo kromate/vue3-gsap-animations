@@ -8,7 +8,7 @@ export const animationPageList = [
 	{
 		index: 2,
 		title: 'Animation Two',
-		desc: 'lorem',
+		desc: 'A simple welcome screen with a loader',
 		link: '/animations/pageTwo',
 	}
 ]
