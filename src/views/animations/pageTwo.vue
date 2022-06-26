@@ -20,8 +20,8 @@
 		</p>
 
 		<div class="welcome">
-			<h1 class="heading">Max Mustermann</h1>
-			<h3 class="sub-heading">UI-Designer & Web Developer</h3>
+			<h1 class="heading">Anthony Akpan</h1>
+			<h3 class="sub-heading">Frontend Developer</h3>
 			<div class="loader-wrapper">
 				<div class="loader"></div>
 			</div>
@@ -34,7 +34,7 @@
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 
-const timeline = gsap.timeline()
+const timeline = gsap.timeline({ease: 'Expo.easeOutIn', duration: 1.8})
 onMounted(() => {
 	timeline.fromTo(
 		'.welcome',
@@ -45,15 +45,16 @@ onMounted(() => {
 		{
 			width: '100vw',
 			opacity: 1,
-			duration: 1.2,
+			duration: 0.8,
 		}
 	)
 
-	timeline.fromTo('.heading', {},{})
-	timeline.fromTo('.sub-heading', {},{})
-	timeline.fromTo('.loader', {},{})
-	timeline.fromTo('.loader-wrapper', {},{})
-	timeline.fromTo('p', {},{})
+	timeline.fromTo('.heading', {y:'-30px'},{y:0, opacity:1,  })
+	timeline.fromTo('.sub-heading', {y:'-30px'},{y:0, opacity:1,  })
+    	timeline.to('.loader-wrapper', {opacity:1})
+	timeline.fromTo('.loader', {width:'0%'},{width:'100%', duration:2.3})
+	timeline.to('.welcome', {x:'100vw'})
+	timeline.fromTo('p', {y:'-30px'},{y:0, opacity:1 })
 })
 </script>
 
@@ -67,6 +68,7 @@ onMounted(() => {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+    overflow-x: hidden;
 }
 
 .welcome {
