@@ -1,0 +1,81 @@
+.cardx {
+    @apply center hover:scale-105  hover:border-2 border border-black relative rounded w-72 h-36 p-3 shadow text-xl card text-center transition-all duration-500;
+}
+
+.card:hover .num {
+    top: -35px;
+    color: #59b0ad; /* this is the fallback */
+    -webkit-text-stroke: 1.5px #396b69f1;
+    -webkit-text-fill-color: transparent;
+}
+
+.card .explore {
+    position: absolute;
+    background: #000;
+    width: 1%;
+    height: 1%;
+    pointer-events: none;
+    opacity: 0;
+    transition: all;
+    transition-duration: 500ms;
+}
+.card:hover .explore {
+    position: absolute;
+    opacity: 1;
+    height: 100%;
+    width: 100%;
+    background: rgba(42, 64, 42, 0.89);
+}
+.card:hover .card_text {
+    opacity: 0;
+}
+
+.num {
+    color: #333; /* this is the fallback */
+    -webkit-text-stroke: 1px #333;
+    -webkit-text-fill-color: transparent;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+.overlay-2 {
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: #59b0ad;
+}
+
+button {
+    letter-spacing: 6px;
+    color: #fff;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    background: none;
+    z-index: 1;
+    cursor: crosshair;
+    transition: 0.8s ease-out;
+}
+
+.myBtn:hover {
+    color: #101010;
+    cursor: pointer;
+    border: 2px solid #101010;
+}
+
+.myBtn:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    transition: top 0.65s ease-out;
+}
+
+.myBtn:hover:before {
+    top: 0;
+}
