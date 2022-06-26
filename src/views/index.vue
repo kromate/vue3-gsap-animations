@@ -17,7 +17,7 @@
 		<div class="content bg-white  w-full px-5">
 			<h1 class="text-5xl font-bold uppercase my-10">Enjoy!</h1>
 			<div class="flex flex-wrap px-10 justify-center w-full mx-auto gap-8 gap-y-12 pb-12">
-				<router-link to="/animations/pageOne" class="card relative border border-black rounded w-72 h-36 p-3 shadow text-xl card text-center " v-for="n in 5" :key="n">
+				<router-link to="/animations/pageOne" class="hover:scale-105 hover:border-[#fff] border border-black relative rounded w-72 h-36 p-3 shadow text-xl card text-center transition-all duration-500" v-for="n in 5" :key="n">
 					<span class="absolute text-6xl font-bold num -top-8 -right-5 uppercase">0{{n}}</span>
 					<span class="title text-3xl font-bold mb-2 block ">Animation {{n}}</span> 
 					<span class="sub text-sm card_text block">This is the same as the website intro, Just with a reverse button added</span>
@@ -72,24 +72,11 @@ const fadeOut =()=> {
 
 </script>
 
-<style scoped>
-.card::before, .card::after {
-  position: absolute;
-  background: #eee;
-  z-index: -1;
-  transition: 1s;
-  content: '';
-}
+<style scoped lang="scss">
 
-.card::before {
-  height: 50px;
-  width: 130px;
-}
 
-.card::after {
-  width: 150px;
-  height: 30px;
-}
+
+
 
 .num{
 	 color: #333; /* this is the fallback */
