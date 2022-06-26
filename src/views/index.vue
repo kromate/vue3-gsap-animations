@@ -1,7 +1,7 @@
 <template>
-	<div class="container overflow-hidden h-screen bg-white cursor-crosshair">
+	<div class=" w-screen overflow-x-hidden h-screen bg-white cursor-crosshair ">
 
-		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center flex flex-col md:flex-row gap-5">
+		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center  flex-col md:flex-row gap-5 ">
 			<p class="screen text-[#323232] font-extrabold md:text-9xl text-[55px] leading-[60px] flex flex-col">
 				<span class="hover:text-[#42b883]  transition-all duration-500" >Vue 3</span>
 				<span class="hover:text-[#5876e3] transition-all duration-500">Gsap</span>
@@ -12,14 +12,15 @@
 			</div>
 		</div>
 
-		<div class="overlay-2"></div>
+		<div class="overlay-2 "></div>
 
-		<div class="content bg-white h-screen w-full px-5 pt-10">
-			<h1 class="text-5xl font-bold uppercase mb-5">Enjoy!</h1>
-			<div class="flex gap-3">
-				<router-link to="/animations/pageOne" class="relative border border-black rounded p-8 shadow">
-					<span class="absolute text-5xl font-bold">01</span>
-					Animation 1
+		<div class="content bg-white  w-full px-5">
+			<h1 class="text-5xl font-bold uppercase my-10">Enjoy!</h1>
+			<div class="flex flex-wrap px-10 justify-center w-full mx-auto gap-8 gap-y-12 pb-12">
+				<router-link to="/animations/pageOne" class="card relative border border-black rounded w-72 h-36 p-3 shadow text-xl card text-center " v-for="n in 5" :key="n">
+					<span class="absolute text-6xl font-bold num -top-8 -right-5 uppercase">0{{n}}</span>
+					<span class="title text-3xl font-bold mb-2 block ">Animation {{n}}</span> 
+					<span class="sub text-sm card_text block">This is the same as the website intro, Just with a reverse button added</span>
 				</router-link>
 			</div>
 		</div>
@@ -72,6 +73,29 @@ const fadeOut =()=> {
 </script>
 
 <style scoped>
+.card::before, .card::after {
+  position: absolute;
+  background: #eee;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.card::before {
+  height: 50px;
+  width: 130px;
+}
+
+.card::after {
+  width: 150px;
+  height: 30px;
+}
+
+.num{
+	 color: #333; /* this is the fallback */
+  -webkit-text-stroke: 1px #333;
+  -webkit-text-fill-color: transparent;
+}
 
 
 
