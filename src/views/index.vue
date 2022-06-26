@@ -16,8 +16,12 @@
 
 		<div class="content bg-white h-screen w-full px-5 pt-10">
 			<h1 class="text-5xl font-bold uppercase mb-5">Enjoy!</h1>
-			<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eaque blanditiis culpa, voluptate reprehenderit sapiente quibusdam odio eum beatae autem quaerat tempora et vitae sint, porro assumenda distinctio eos?
-				Nesciunt!</p>
+			<div class="flex gap-3">
+				<router-link to="/animations/pageOne" class="relative border border-black rounded p-8 shadow">
+					<span class="absolute text-5xl font-bold">01</span>
+					Animation 1
+				</router-link>
+			</div>
 		</div>
 	</div>
 </template>
