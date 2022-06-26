@@ -39,7 +39,7 @@ import { gsap } from 'gsap'
 
 const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8, delay:0 })
 onMounted(() => {
-
+	timeline.play(0)
 	timeline.fromTo(
 		'.welcome',
 		{
@@ -53,11 +53,11 @@ onMounted(() => {
 		}
 	)
 
-	timeline.fromTo('.heading', { y: '-30px' }, { y: 0, opacity: 1 })
-	timeline.fromTo('.sub-heading', { y: '-30px' }, { y: 0, opacity: 1 })
-	timeline.to('.loader-wrapper', { opacity: 1 })
+	timeline.fromTo('.heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
+	timeline.fromTo('.sub-heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
+	timeline.fromTo('.loader-wrapper',{y: '-30px', opacity: 0}, {y:0, opacity: 1 })
 	timeline.fromTo('.loader', { width: '0%' }, { width: '100%', duration: 2.3 })
-	timeline.to('.welcome', { x: '100vw', display: 'none' })
+	timeline.fromTo('.welcome',{x:0, display:'flex'}, { x: '100vw', display: 'none' })
 	timeline.fromTo('p', { y: '-30px' }, { y: 0, opacity: 1, stagger: 0.35 })
 })
 
@@ -101,7 +101,7 @@ const replay = () => timeline.seek(0)
 	font-weight: 100;
 	letter-spacing: 2px;
 	font-family: 'Avenir Next';
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	opacity: 0;
 }
 
