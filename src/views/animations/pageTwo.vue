@@ -30,11 +30,10 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
 
-import { onMounted } from 'vue'
-import { gsap } from 'gsap'
-
-const timeline = gsap.timeline({ease: 'Expo.easeOutIn', duration: 1.8})
+const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8 });
 onMounted(() => {
 	timeline.fromTo(
 		'.welcome',
@@ -47,15 +46,15 @@ onMounted(() => {
 			opacity: 1,
 			duration: 0.8,
 		}
-	)
+	);
 
-	timeline.fromTo('.heading', {y:'-30px'},{y:0, opacity:1,  })
-	timeline.fromTo('.sub-heading', {y:'-30px'},{y:0, opacity:1,  })
-    	timeline.to('.loader-wrapper', {opacity:1})
-	timeline.fromTo('.loader', {width:'0%'},{width:'100%', duration:2.3})
-	timeline.to('.welcome', {x:'100vw'})
-	timeline.fromTo('p', {y:'-30px'},{y:0, opacity:1 })
-})
+	timeline.fromTo('.heading', { y: '-30px' }, { y: 0, opacity: 1 });
+	timeline.fromTo('.sub-heading', { y: '-30px' }, { y: 0, opacity: 1 });
+	timeline.to('.loader-wrapper', { opacity: 1 });
+	timeline.fromTo('.loader', { width: '0%' }, { width: '100%', duration: 2.3 });
+	timeline.to('.welcome', { x: '100vw' });
+	timeline.fromTo('p', { y: '-30px' }, { y: 0, opacity: 1 });
+});
 </script>
 
 <style scoped>
@@ -68,7 +67,7 @@ onMounted(() => {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-    overflow-x: hidden;
+	overflow-x: hidden;
 }
 
 .welcome {
