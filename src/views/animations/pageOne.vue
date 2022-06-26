@@ -18,53 +18,54 @@
 			<h1 class="text-5xl font-bold uppercase mb-5">Enjoy!</h1>
 			<p class="text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eaque blanditiis culpa, voluptate reprehenderit sapiente quibusdam odio eum beatae autem quaerat tempora et vitae sint, porro assumenda distinctio eos?
 				Nesciunt!</p>
+
+			<button class="!bg-black md:py-4 mt-3 py-3 md:px-12 px-6 font-bold border-2 text-xs md:text-base cursor-pointer" @click="reverse">reverse</button>
 		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
 import {gsap} from 'gsap'
-const fadeOut =()=> {
 
-	gsap.to('.myBtn', 0.5, {
+const timeline = gsap.timeline()
+
+const fadeOut = ()=> {
+	timeline.play(0)
+	timeline.to('.myBtn', {
 		y: -100,
-		opacity: 0
+		opacity: 0,
+		duration: 0.5,
 	})
 
-	gsap.to('.screen', 1, {
+	timeline.to('.screen', {
 		y: -400,
 		opacity: 0,
 		ease: 'Power2.easeInOut',
-		delay: 0.5
+		duration: 0.5,
 	})
 
-	gsap.to('.overlay', 1, {
-		delay: 1,
-		top: '-110%',
-		ease: 'Expo.easeInOut'
-	})
-
-	gsap.to('.overlay-2', 1, {
-		delay: 1.5,
+	timeline.to('.overlay', {
 		top: '-110%',
 		ease: 'Expo.easeInOut',
-		duration:0.1
+		duration: 0.5,
 	})
 
-	gsap.from('.content', 1, {
-		delay: 2,
-		opacity: 0,
-		ease: 'Power2.easeInOut'
+	timeline.to('.overlay-2', {
+		top: '-110%',
+		ease: 'Expo.easeInOut',
+		duration:0.5
 	})
 
-	gsap.to('.content', 1, {
+
+	timeline.fromTo('.content', {opacity: 0}, {
 		opacity: 1,
-		delay: 2,
-		ease: 'Power2.easeInOut'
+		duration: 0.3,
 	})
+
 
 }
 
+const reverse = ()=> timeline.reverse()
 </script>
 
 <style scoped>
@@ -88,7 +89,7 @@ button {
      overflow: hidden;
      background: none;
      z-index: 1;
-     cursor: crosshair;
+     /* cursor: crosshair; */
      transition: 0.8s ease-out;
 }
 
