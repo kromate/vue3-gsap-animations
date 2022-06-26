@@ -17,12 +17,12 @@
 		<div class="content bg-white  w-full px-5">
 			<h1 class="text-5xl font-bold uppercase my-10">Enjoy!</h1>
 			<div class="flex flex-wrap px-10 justify-center w-full mx-auto gap-8 gap-y-12 pb-12">
-				<router-link to="/animations/pageOne" class="card center hover:scale-105 hover:border-[#59b0ad] hover:border-2 border border-black relative rounded w-72 h-36 p-3 shadow text-xl card text-center transition-all duration-500" v-for="n in 5" :key="n">
+				<router-link to="/animations/pageOne" class="card center hover:scale-105  hover:border-2 border border-black relative rounded w-72 h-36 p-3 shadow text-xl card text-center transition-all duration-500" v-for="n in 5" :key="n">
 					<span class="absolute text-3xl font-bold num -top-5 -right-5 uppercase transition-all duration-500">Animation - 0{{n}}</span>
 					<!-- <span class="title text-3xl font-bold mb-2 block ">Animation {{n}}</span>  -->
 					<span class="sub text-sm card_text block ">This is the same as the website intro, Just with a reverse button added</span>
-					<div class="explore text-white center" tabIndex="-1">
-						<span>Explore</span>
+					<div class="explore text-white center font-bold text-3xl " >
+						<span>View </span>
 					</div>
 				</router-link>
 			</div>
@@ -80,29 +80,26 @@ const fadeOut =()=> {
 .card:hover .num {
 	top:-35px;
 		 color: #59b0ad; /* this is the fallback */
-  -webkit-text-stroke: 2px #59b0ad;
+  -webkit-text-stroke: 1.5px #396b69f1;
   -webkit-text-fill-color: transparent;
 }
 
 .card .explore{
-	// transform: translateY(144px);
 	position: absolute;
 	background: #000;
-	width: 100%;
+	width: 1%;
 	height: 1%;
 	pointer-events: none;
 	opacity: 0;
-	z-index: -10;
-	  transition: all ;
+	transition: all ;
   transition-duration: 500ms;
 }
 .card:hover .explore{
-	// transform: translateY(0);
 	position: absolute;
-	display: block;
 	opacity: 1;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.75);
+	width: 100%;
+	background: rgba(42, 64, 42, 0.79);
 
 }
 
