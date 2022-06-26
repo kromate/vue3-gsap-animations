@@ -18,7 +18,7 @@
 		<div class="content bg-white  w-full px-5">
 			<h1 class="text-5xl font-bold uppercase my-10">Enjoy!</h1>
 			<div class="flex flex-wrap px-10 justify-center w-full mx-auto gap-8 gap-y-12 pb-12">
-				<router-link to="/animations/pageOne" class="card cardx" v-for="n in 5" :key="n">
+				<router-link to="/animations/pageOne" class="card cardx" v-for="n in 15" :key="n">
 					<span class="absolute text-3xl font-bold num -top-5 -right-5 uppercase transition-all duration-500">Animation - 0{{n}}</span>
 					<span class="sub text-sm card_text block ">This is the same as the website intro, Just with a reverse button added</span>
 					<div class="explore text-white center font-bold text-3xl " >
