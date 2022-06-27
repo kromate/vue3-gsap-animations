@@ -1,6 +1,6 @@
 <template>
 	<div class="text-xl">
-		33
+		3
 	</div>
 </template>
 
