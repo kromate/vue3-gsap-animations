@@ -3,7 +3,7 @@
 	<div class=" w-screen overflow-x-hidden h-screen bg-white cursor-crosshair ">
 
 		<div class="overlay bg-[#101010] z-10 h-screen w-screen absolute inset-0 center  flex-col md:flex-row gap-5 ">
-			<p class="screen text-[#323232] font-extrabold md:text-9xl text-[55px] leading-[60px] flex flex-col">
+			<p class="screen text-[#323232] font-extrabold md:text-9xl text-[55px] leading-[60px] flex flex-col opacity-100">
 				<span class="hover:text-[#42b883]  transition-all duration-500" >Vue 3</span>
 				<span class="hover:text-[#5876e3] transition-all duration-500">Gsap</span>
 				<span class="hover:text-[#e36868] transition-all duration-500">Animations</span>
