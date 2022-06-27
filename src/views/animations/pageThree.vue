@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="text-xl">
 		33
 	</div>
 </template>
