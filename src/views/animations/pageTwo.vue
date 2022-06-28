@@ -38,6 +38,10 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { useMeta } from 'vue-meta'
+useMeta({
+	title: 'Animation Two',
+})
 
 const timeline = gsap.timeline({ ease: 'Expo.easeOutIn', duration: 1.8, delay:0 })
 onMounted(() => {
