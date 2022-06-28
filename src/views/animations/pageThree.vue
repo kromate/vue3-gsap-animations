@@ -1,15 +1,18 @@
 <template>
-	<div class="container" @click="onClick">
-		<p class="card-name">Platinum Card</p>
-		<h1 class="card-balance">$332,176.66</h1>
-		<img class="logo" src="@/assets/images/pageThree/ring.png" alt="" />
-		<img class="sim" src="@/assets/images/pageThree/sim.png" alt="" />
+	<div class="body center ">
+		<div class="container" @click="onClick">
+			<p class="card-name">Platinum Card</p>
+			<h1 class="card-balance">$332,176.66</h1>
+			<img class="logo" src="@/assets/images/pageThree/ring.png" alt="" />
+			<img class="sim" src="@/assets/images/pageThree/sim.png" alt="" />
 
-		<p class="card-number">**** **** 3322</p>
-		<p class="due-date">07/25</p>
+			<p class="card-number">**** **** 3322</p>
+			<p class="due-date">07/25</p>
 
-		<img src="@/assets/images/pageThree/pattern.png" class="card-logo" alt="" />
+			<img src="@/assets/images/pageThree/pattern.png" class="card-logo" alt="" />
+		</div>
 	</div>
+
 </template>
 
 <script setup lang="ts">
@@ -45,16 +48,9 @@ onMounted(()=>{
 </script>
 
 <style scoped>
-*,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: inherit;
-	box-sizing: inherit;
-}
 
-body {
+
+.body {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	font-family: 'poppins', sans-serif;
@@ -71,6 +67,7 @@ body {
 	transform: translate(-50%, -50%);
 	background: linear-gradient(to right bottom, #323941, #061018);
 	width: 520px;
+    max-width: 98%;
 	height: 120px;
 	border-radius: 20px;
 	box-shadow: 0px 56px 72px -30px rgba(50, 55, 63, 0.66);
