@@ -2,18 +2,19 @@
 	<div class="container" @click="onClick">
 		<p class="card-name">Platinum Card</p>
 		<h1 class="card-balance">$332,176.66</h1>
-		<img class="logo" src="images/ring.png" alt="" />
-		<img class="sim" src="images/sim.png" alt="" />
+		<img class="logo" src="@/assets/images/pageThree/ring.png" alt="" />
+		<img class="sim" src="@/assets/images/pageThree/sim.png" alt="" />
 
 		<p class="card-number">**** **** 3322</p>
 		<p class="due-date">07/25</p>
 
-		<img src="images/pattern.png" class="card-logo" alt="" />
+		<img src="@/assets/images/pageThree/pattern.png" class="card-logo" alt="" />
 	</div>
 </template>
 
 <script setup lang="ts">
 import {gsap} from 'gsap'
+import { onMounted } from 'vue'
 
 const t1 = gsap.timeline({ paused: true, reversed: true })
 let watch = false
@@ -28,84 +29,19 @@ const onClick = () => {
 		watch = false
 	}
 }
+onMounted(()=>{
+	t1.to('.container', {ease: 'power1.inOut',height: 280,},0)
+	t1.to('.sim', {	ease: 'power1.inOut', bottom: 40, opacity: 0.5,}, 0.5)
+	t1.to('.card-logo',	{ease: 'power1.inOut',right: -150,},0.6)
+	t1.to('.logo', { ease: 'power1.inOut',left: 30,	top: 45,},0.5)
+	t1.to('.card-balance',{ease: 'power1.inOut',y: 80,x: 20,scale: 1.1,},0.5)
+	t1.to('.card-name', { ease: 'power1.inOut',	y: 80,},0.5)
+	t1.to('.card-number',{ease: 'power1.inOut',	right: 40,opacity: 0.5,},0.5)
+	t1.to( '.due-date', { ease: 'power1.inOut', right: 40, opacity: 0.5, }, 0.5 )
+})
 
-t1.to(
-	'.container',
-	{
-		ease: 'power1.inOut',
-		height: 280,
-	},
-	0
-)
 
-t1.to(
-	'.sim',
-	{
-		ease: 'power1.inOut',
-		bottom: 40,
-		opacity: 0.5,
-	},
-	0.5
-)
 
-t1.to(
-	'.card-logo',
-	{
-		ease: 'power1.inOut',
-		right: -150,
-	},
-	0.6
-)
-
-t1.to(
-	'.logo',
-	{
-		ease: 'power1.inOut',
-		left: 30,
-		top: 45,
-	},
-	0.5
-)
-
-t1.to(
-	'.card-balance',
-	{
-		ease: 'power1.inOut',
-		y: 80,
-		x: 20,
-		scale: 1.1,
-	},
-	0.5
-)
-
-t1.to(
-	'.card-name',
-	{
-		ease: 'power1.inOut',
-		y: 80,
-	},
-	0.5
-)
-
-t1.to(
-	'.card-number',
-	{
-		ease: 'power1.inOut',
-		right: 40,
-		opacity: 0.5,
-	},
-	0.5
-)
-
-t1.to(
-	'.due-date',
-	{
-		ease: 'power1.inOut',
-		right: 40,
-		opacity: 0.5,
-	},
-	0.5
-)
 </script>
 
 <style scoped>
