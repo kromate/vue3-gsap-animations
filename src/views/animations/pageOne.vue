@@ -26,7 +26,10 @@
 
 <script setup lang="ts">
 import {gsap} from 'gsap'
-
+import { useMeta } from 'vue-meta'
+useMeta({
+	title: 'Animation One',
+})
 const timeline = gsap.timeline()
 
 const fadeOut = ()=> {
