@@ -76,6 +76,7 @@
 </template>
 
 <script setup lang="ts">
+// @ts-ignore
 import Parallax from 'parallax-js'
 import { onMounted } from 'vue'
 import {gsap} from 'gsap'

@@ -36,8 +36,8 @@
 							<p>Total Cost</p>
 							<h5>$899 <span>/ Person</span> </h5>
 						</div>
-						<div class="book">Book Now</div>
-						<div class="cancel">Cancel</div>
+						<div class="book" @click="play">Book Now</div>
+						<div class="cancel" @click="reverse">Cancel</div>
 					</div>
 
 					<div class="divider"></div>
@@ -70,19 +70,16 @@
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
 
+const t1 = gsap.timeline({paused: true, reserved: true})
+const play = () => {
+	t1.play()
+}
+const reverse = () => {
+	t1.reverse()
+}
+
+
 onMounted(()=>{
-	const t1 = gsap.timeline({paused: true, reserved: true})
-
-	const bookNow = document.querySelector('.book')
-	const cancel = document.querySelector('.cancel')
-
-	bookNow.addEventListener('click', (e) => {
-		t1.play()
-	})
-
-	cancel.addEventListener('click', (e) => {
-		t1.reverse()
-	})
 
 
 	t1.to(
@@ -178,7 +175,7 @@ background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
 .container .body{
   background-color: #232631;
   color: #fff;
-  margin-top: 40%;
+  margin-top: 45%;
   height: 100%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
