@@ -1,3 +1,5 @@
+import { useTitle } from '@vueuse/core'
+
 export const animationPageList = [
 	{
 		index: 1,
@@ -24,3 +26,9 @@ export const animationPageList = [
 		link: '/animations/pageFour',
 	}
 ]
+
+
+export const setTitle = (data) => {
+	const title = useTitle()
+	title.value = data
+}

@@ -26,10 +26,9 @@
 
 <script setup lang="ts">
 import {gsap} from 'gsap'
-import { useMeta } from 'vue-meta'
-useMeta({
-	title: 'Animation One',
-})
+import { setTitle } from '@/composables/utils'
+setTitle('Animation One')
+
 const timeline = gsap.timeline()
 
 const fadeOut = ()=> {

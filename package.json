@@ -13,7 +13,7 @@
 		"gsap": "^3.10.4",
 		"scss": "^0.2.4",
 		"vue": "^3.2.25",
-		"vue-meta": "^3.0.0-alpha.7",
+		"vue-meta": "^3.0.0-alpha.10",
 		"vue-router": "^4.0.16"
 	},
 	"devDependencies": {
