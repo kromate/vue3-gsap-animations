@@ -1,5 +1,7 @@
 <template>
 	<div class="body px-5">
+
+		<h1 class="loading text-4xl text-center font-bold">Please Wait...</h1>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
 			possimus pariatur omnis voluptatibus aspernatur, minus labore adipisci,
@@ -53,6 +55,7 @@ onMounted(() => {
 		}
 	)
 
+	timeline.to('.loading', { display:'none' })
 	timeline.fromTo('.heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
 	timeline.fromTo('.sub-heading', { y: '-30px', opacity: 0 }, { y: 0, opacity: 1 })
 	timeline.fromTo('.loader-wrapper',{y: '-30px', opacity: 0}, {y:0, opacity: 1 })
