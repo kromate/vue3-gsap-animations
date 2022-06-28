@@ -24,11 +24,17 @@ export const animationPageList = [
 		title: 'Animation Four',
 		desc: 'A Juice Website landing page with animations',
 		link: '/animations/pageFour',
-	}
+	},
+	{
+		index: 5,
+		title: 'Animation Five',
+		desc: 'An Animated Travel App screen',
+		link: '/animations/pageFive',
+	},
 ]
 
 
-export const setTitle = (data) => {
+export const setTitle = (data:any) => {
 	const title = useTitle()
 	title.value = data
 }
