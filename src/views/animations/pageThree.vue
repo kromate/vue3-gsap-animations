@@ -18,10 +18,9 @@
 <script setup lang="ts">
 import {gsap} from 'gsap'
 import { onMounted } from 'vue'
-import { useMeta } from 'vue-meta'
-useMeta({
-	title: 'Animation Three',
-})
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Three')
+
 const t1 = gsap.timeline({ paused: true, reversed: true })
 let watch = false
 
