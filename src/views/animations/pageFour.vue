@@ -67,8 +67,8 @@
 		</div>
 
 		<div class="arrows">
-			<button class="prev"><i class="fa fa-chevron-left"></i></button>
-			<button class="next"><i class="fa fa-chevron-right"></i></button>
+			<button class="prev"><i class="las la-chevron-left"></i></button>
+			<button class="next"><i class="las la-chevron-right"></i></button>
 		</div>
 
 
@@ -389,7 +389,8 @@ ul {
 .arrows button {
   border: 1px solid #999;
   background: transparent;
-  padding: 20px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   outline: none;
 }
