@@ -40,13 +40,13 @@ export const animationPageList = [
 	{
 		index: 7,
 		title: 'Animation Seven',
-		desc: '',
+		desc: 'A Fashion Landing Page with animations',
 		link: '/animations/pageSeven',
 	},
 	{
 		index: 8,
 		title: 'Animation Eight',
-		desc: '',
+		desc: 'A GSAP fullscreen Slider',
 		link: '/animations/pageEight',
 	},
 	{
