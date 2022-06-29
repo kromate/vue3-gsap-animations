@@ -80,6 +80,8 @@
 import Parallax from 'parallax-js'
 import { onMounted } from 'vue'
 import {gsap} from 'gsap'
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Four')
 
 onMounted(()=>{
 	    const scene = document.getElementById('scene')

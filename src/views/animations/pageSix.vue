@@ -10,6 +10,9 @@
 </template>
 
 <script setup lang="ts">
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Six')
+
 
 </script>
 

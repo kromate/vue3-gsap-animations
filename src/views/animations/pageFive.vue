@@ -69,6 +69,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { gsap } from 'gsap'
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Five')
 
 const t1 = gsap.timeline({paused: true, reserved: true})
 const play = () => {
