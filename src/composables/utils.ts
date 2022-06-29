@@ -31,6 +31,36 @@ export const animationPageList = [
 		desc: 'An Animated Travel App screen',
 		link: '/animations/pageFive',
 	},
+	{
+		index: 6,
+		title: 'Animation Six',
+		desc: 'An add to cart button animation',
+		link: '/animations/pageSix',
+	},
+	{
+		index: 7,
+		title: 'Animation Seven',
+		desc: '',
+		link: '/animations/pageSeven',
+	},
+	{
+		index: 8,
+		title: 'Animation Eight',
+		desc: '',
+		link: '/animations/pageEight',
+	},
+	{
+		index: 9,
+		title: 'Animation Nine',
+		desc: '',
+		link: '/animations/pageNine',
+	},
+	{
+		index: 10,
+		title: 'Animation Ten',
+		desc: '',
+		link: '/animations/pageTen',
+	},
 ]
 
 
