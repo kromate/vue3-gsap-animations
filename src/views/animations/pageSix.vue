@@ -14,11 +14,15 @@ import { setTitle } from '@/composables/utils'
 setTitle('Animation Six')
 
 
-const  cartClick = (e)=> {
-	// const button = this as any
-	console.log(e.target.classList.contains)
-	e.target.classList.add('clicked')
-	// button?.classList.add('clicked')
+const  cartClick = (e:any)=> {
+
+	if(e.target.classList.contains('clicked')){
+		e.target.classList.remove('clicked')
+	}else{
+		e.target.classList.add('clicked')
+	}
+	
+
 }
 
 
