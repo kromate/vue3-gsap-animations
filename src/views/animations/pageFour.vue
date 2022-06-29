@@ -1,78 +1,78 @@
 <template>
-	<div class="wrapper">
-		<div class="nav">
-			<div class="logo">Clean Juice</div>
+	<div class="w-screen overflow-x-hidden">
+		<div class="container mx-auto px-4">
+			<nav class="flex justify-between mt-4 container mx-auto items-center">
+				<div class="logo text-2xl">Clean Juice</div>
 
-			<div class="menu-links">
-				<ul>
-					<li>locations</li>
-					<li>our menu</li>
-					<li>our story</li>
-					<li>meet our teem</li>
-					<li>own a clean juice</li>
-					<li>contact us</li>
+				<div class="menu-links text-xs lg:text-sm hidden lg:flex">
+					<ul>
+						<li>locations</li>
+						<li>our menu</li>
+						<li>our story</li>
+						<li>meet our teem</li>
+						<li>own a clean juice</li>
+						<li>contact us</li>
+					</ul>
+				</div>
+
+				<div class="cart bg-black p-2 text-white h-8 w-8 center rounded-full"><i class="i las la-shopping-cart"></i></div>
+			</nav>
+
+			<main class="flex flex-wrap items-center mt-12 justify-center">
+				<div class="tagline lg:text-3xl text-lg">Find your clean juice</div>
+
+				<div class="pages"><span>2</span>/21</div>
+
+				<div class="title text-center">orange</div>
+
+				<div class="more hidden md:block"><a href="#">show all the juices</a></div>
+
+				<div class="desc hidden md:block">
+					<p>
+						Your <span>healthy</span> life <br>
+						starts here with us
+					</p>
+					<p>
+						A family owned company founded with the purpose of giving your family access to clean, organic products while
+						you are on the go.
+					</p>
+				</div>
+			</main>
+
+			<div class="juice">
+				<img src="@/assets/images/pageFour/juice.png">
+			</div>
+
+			<div class="leaves !z-50">
+				<ul id="scene">
+					<li class="layer" data-depth="-.1">
+						<img src="@/assets/images/pageFour/leaf01.png" alt="">
+					</li>
+					<li class="layer" data-depth="-.3">
+						<img src="@/assets/images/pageFour/leaf02.png" alt="">
+					</li>
+					<li class="layer" data-depth="-1.5">
+						<img src="@/assets/images/pageFour/leaf03.png" alt="">
+					</li>
+					<li class="layer" data-depth=".1">
+						<img src="@/assets/images/pageFour/leaf04.png" alt="">
+					</li>
+					<li class="layer" data-depth=".3">
+						<img src="@/assets/images/pageFour/leaf05.png" alt="">
+					</li>
+				
 				</ul>
 			</div>
 
-			<div class="search"><i class="fa fa-search"></i></div>
-
-			<div class="account">my account</div>
-
-			<div class="cart"><i class="i fa fa-shopping-cart"></i></div>
-		</div>
-
-		<div class="content">
-			<div class="tagline">Find your clean juice</div>
-
-			<div class="pages"><span>2</span>/21</div>
-
-			<div class="title">orange</div>
-
-			<div class="more"><a href="#">show all the juices</a></div>
-
-			<div class="desc">
-				<p>
-					Your <span>healthy</span> life <br>
-					starts here with us
-				</p>
-				<p>
-					A family owned company founded with the purpose of giving your family access to clean, organic products while
-					you are on the go.
-				</p>
+			<div class="arrows w-full lg:block">
+				<button class="prev md:left-24 left-4"><i class="las la-chevron-left"></i></button>
+				<button class="next md:right-24 right-4"><i class="las la-chevron-right"></i></button>
 			</div>
+
+
 		</div>
-
-		<div class="juice">
-			<img src="@/assets/images/pageFour/juice.png" alt="">
-		</div>
-
-		<div class="leaves">
-			<ul id="scene">
-				<li class="layer" data-depth="-.1">
-					<img src="@/assets/images/pageFour/leaf01.png" alt="">
-				</li>
-				<li class="layer" data-depth="-.3">
-					<img src="@/assets/images/pageFour/leaf02.png" alt="">
-				</li>
-				<li class="layer" data-depth="-1.5">
-					<img src="@/assets/images/pageFour/leaf03.png" alt="">
-				</li>
-				<li class="layer" data-depth=".1">
-					<img src="@/assets/images/pageFour/leaf04.png" alt="">
-				</li>
-				<li class="layer" data-depth=".3">
-					<img src="@/assets/images/pageFour/leaf05.png" alt="">
-				</li>
-			</ul>
-		</div>
-
-		<div class="arrows">
-			<button class="prev"><i class="las la-chevron-left"></i></button>
-			<button class="next"><i class="las la-chevron-right"></i></button>
-		</div>
-
-
 	</div>
+
 </template>
 
 <script setup lang="ts">
@@ -101,19 +101,6 @@ onMounted(()=>{
 	  duration:1
 	})
 
-	gsap.from('.search', 1, {
-		delay: .5,
-		opacity: 0,
-		x: -20,
-		ease: 'Expo.easeInOut'
-	})
-
-	gsap.from('.account', 1, {
-		delay: .6,
-		opacity: 0,
-		x: -20,
-		ease: 'Expo.easeInOut'
-	})
 
 	gsap.from('.cart', 1, {
 		delay: .7,
@@ -208,10 +195,7 @@ onMounted(()=>{
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
+
 
 body {
   width: 100%;
@@ -225,50 +209,25 @@ ul {
   list-style: none;
 }
 
-.nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-top: 20px;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-.logo {
-  font-size: 40px;
-}
 
 .menu-links ul li {
   display: inline-block;
   padding-right: 20px;
 }
 
-.search,
-.cart {
-  font-size: 20px;
-}
 
-.content {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  z-index: -1;
-}
+
+
 
 .title {
   flex: 0 0 100%;
-  font-size: 200px;
+  font-size: 17vw;
   text-transform: uppercase;
   font-weight: 700;
 }
 
 .tagline {
   flex: 1;
-  font-size: 30px;
   color: #999;
 }
 
@@ -318,7 +277,7 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .juice img {
@@ -339,12 +298,10 @@ ul {
 }
 
 .leaves {
-  width: 100%;
-  height: 100vh;
   position: absolute;
   top: 50%;
   left: 50%;
-  z-index: -1;
+  /* z-index: -10; */
 }
 
 .leaves img {
@@ -380,13 +337,13 @@ ul {
 .arrows .prev {
   position: absolute;
   top: 50%;
-  left: 100px;
+
 }
 
 .arrows .next {
   position: absolute;
   top: 50%;
-  right: 100px;
+
 }
 
 .arrows button {
