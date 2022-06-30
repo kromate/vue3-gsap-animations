@@ -324,6 +324,7 @@ h1{
 #main .part .section img {
   width: 100vw;
   max-width: 100vw;
+  max-height: 100vh;
   height: 100vh;
   object-fit: cover;
   position: absolute;
