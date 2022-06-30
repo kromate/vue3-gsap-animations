@@ -50,9 +50,9 @@ export const fadeOut = ()=> {
 		{
 			opacity: 1,
 			y: 0,
-			stagger: 0.35,
-			duration: 0.5,
-			delay:0.1
+			stagger: 0.25,
+			duration: 0.35,
+			delay:0
 			// ease: 'easeInOut'
 		})
 
