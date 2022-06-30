@@ -87,7 +87,7 @@ onMounted(() => {
 		const el = document.createElement('div')
 		el.className = 'section'
 		const img = document.createElement('img')
-		img.src = images[col]
+		img.src = images[current.value]
 		el.appendChild(img)
 		part.style.setProperty('--x', (-100 / cols.value) * col + 'vw')
 		part.appendChild(el)
