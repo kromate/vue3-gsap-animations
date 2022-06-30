@@ -200,148 +200,158 @@ onMounted(() => {
 })
 </script>
 
-<style lang="scss">
-* {
-	box-sizing: border-box;
-	outline: none;
-	-webkit-tab-highlight-color: transparent;
-	cursor: none;
-	user-select: none;
-	-webkit-user-drag: none;
+<style>
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: "poppins", sans-serif;
 }
 
-h1 {
-	font-family: 'Abril Fatface', sans-serif;
-	font-weight: normal;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: 99;
-	color: #fff;
-	text-align: center;
-	font-size: 3.6em;
-	mix-blend-mode: overlay;
-	pointer-events: none;
+*{
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tab-highlight-color: transparent;
+  cursor: none;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-.content {
-	width: 90%;
-	color: #fff;
-	position: absolute;
-	bottom: 20px;
-	text-align: center;
-	left: 0;
-	right: 0;
-	margin: auto;
-	z-index: 99;
-	font-size: 0.8em;
-	text-transform: uppercase;
+#main {
+  display: flex;
 }
 
-.content p {
-	margin: 0.5em auto;
+h1{
+  font-family: "Abril Fatface", sans-serif;
+  font-weight: normal;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99;
+  color: #FFF;
+  text-align: center;
+  font-size: 3.6em;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+.content{
+  width: 90%;
+  color: #FFF;
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 99;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.content p{
+  margin: 0.5em auto;
 }
 
 .content span {
-	width: auto;
-	height: auto;
-	border: 1px solid #fff;
-	display: inline-block;
-	border-radius: 3px;
-	font-size: 0.9em;
-	vertical-align: text-top;
-	padding: 0px 10px;
+  width: auto;
+  height: auto;
+  border: 1px solid #FFF;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0.9em;
+  vertical-align: text-top;
+  padding: 0px 10px;
 }
 
 .content a {
-	color: rgba(227, 227, 227, 0.78);
-	text-decoration: none;
-	border-bottom: 1px solid currentColor;
+  color: rgba(227, 227, 227, 0.78);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
 }
 
 .content a:hover {
-	padding-bottom: 1px;
+  padding-bottom: 1px;
 }
 
-.buttons {
-	position: absolute;
-	right: 25px;
-	top: 50%;
-	transform: translateY(-50%);
-	z-index: 99;
+.buttons{
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
 }
 
 .buttons button {
-	border: none;
-	background-size: contain;
-	background: url('../../assets/images/pageEight/down-arrow.png') no-repeat;
-	background-position: center;
-	width: 10px;
-	height: 30px;
-	display: block;
-	margin: 20px 0;
-	padding: 0 15px;
-	transition-duration: 0.6s;
+  border: none;
+  background-size: contain;
+  background: url('../../assets/images/pageEight/down-arrow.png') no-repeat;
+  background-position: center;
+  width: 10px;
+  height: 30px;
+  display: block;
+  margin: 20px 0;
+  padding: 0 15px;
+  transition-duration: 0.6s;
 }
 
 .buttons button.next {
-	transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
-.buttons button.next:active {
-	transform: scaleY(-1) translateY(8px);
+.buttons button.next:active{
+  transform: scaleY(-1) translateY(8px);
 }
-.buttons button.prev:active {
-	transform: translateY(8px);
+.buttons button.prev:active{
+  transform: translateY(8px);
 }
 
 #main .part {
-	flex: 1;
+  flex: 1;
 }
 
 #main .part .section {
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-img {
-	max-width: 100vw;
-	width: 100vw;
-	height: 100vh;
-	object-fit: cover;
-	position: absolute;
-	left: var(--x);
-	pointer-events: none;
+#main .part .section img {
+  width: 100vw;
+  max-width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: var(--x);
+  pointer-events: none;
 }
-</style>
 
-<style>
-.cursor {
-	width: var(--size);
-	height: var(--size);
-	border-radius: 50%;
-	background-color: #fff;
-	position: absolute;
-	z-index: 999;
-	pointer-events: none;
-	mix-blend-mode: difference;
+.cursor{
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 999;
+  pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 .cursor-f {
-	width: var(--size);
-	height: var(--size);
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-image: url('../../assets/images/pageEight/cursor_round.png');
-	background-size: cover;
-	mix-blend-mode: difference;
-	pointer-events: none;
-	opacity: 0.5;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image:url('../../assets/images/pageEight/cursor_round.png');
+  background-size: cover;
+  mix-blend-mode: difference;
+  pointer-events: none;
+  opacity: 0.5;
 }
 </style>
