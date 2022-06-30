@@ -42,7 +42,7 @@
 			</div>
 
 			<div class="sponsor">
-				<img src="./images/sponsor-logo.png" alt="">
+				<img src="@/assets/images/pageSeven/sponsor-logo.png" alt="">
 				<p>official sponsor</p>
 			</div>
 

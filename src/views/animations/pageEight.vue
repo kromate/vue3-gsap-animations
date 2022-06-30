@@ -71,7 +71,7 @@ const go = (dir: number) => {
 			const img = document.createElement('img')
 			img.src = images[current.value]
 			next.appendChild(img)
-
+			// @ts-ignore
 			if ((p - Math.max(0, dir)) % 2) {
 				down(part, next)
 			} else {
