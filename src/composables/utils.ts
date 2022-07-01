@@ -40,7 +40,7 @@ export const animationPageList = [
 	{
 		index: 7,
 		title: 'Animation Seven',
-		desc: 'A Fashion Landing Page with animations',
+		desc: 'A Simple Image hover effect',
 		link: '/animations/pageSeven',
 	},
 	{
