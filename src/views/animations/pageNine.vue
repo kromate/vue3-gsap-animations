@@ -65,7 +65,7 @@ onMounted(() => {
 			const staggerOrder = !!(current < Number(e.currentTarget.id.substr(1)))
 			current = Number(e.currentTarget.id.substr(1))
 			gsap.to('.box', {
-				duration: 0.5,
+				duration: 1.5,
 				ease: 'elastic.out(0.3)',
 				left: (i) =>
 					i <= current
