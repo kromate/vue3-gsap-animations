@@ -19,6 +19,8 @@
 <script setup lang="ts">
 import { gsap } from 'gsap'
 import { onMounted, ref } from 'vue'
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Eight')
 
 const cols = ref(3)
 const main = ref<HTMLDivElement>()

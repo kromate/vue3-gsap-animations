@@ -58,7 +58,7 @@ export const animationPageList = [
 	{
 		index: 10,
 		title: 'Animation Ten',
-		desc: '',
+		desc: 'An animated mobile screen interaction ',
 		link: '/animations/pageTen',
 	},
 ]

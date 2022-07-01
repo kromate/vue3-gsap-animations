@@ -8,6 +8,9 @@
 import hoverEffect from 'hover-effect'
 import { onMounted } from 'vue'
 
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Seven')
+
 const img_1 = new URL('../../assets/images/pageSeven/01.png', import.meta.url) as any
 const img_2 = new URL('../../assets/images/pageSeven/02.png', import.meta.url) as any
 const diss = new URL('../../assets/images/pageSeven/diss.png', import.meta.url) as any
