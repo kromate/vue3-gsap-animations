@@ -1,70 +1,21 @@
 <template>
-	<div>
-		<div class="wrapper">
+	<div class="w-screen h-screen">
+		<div class="distortion"></div>
 
-			<div class="overlay first"></div>
-			<div class="overlay second"></div>
-			<div class="overlay third"></div>
-
-			<nav class="navbar">
-				<div class="menu">
-					<ion-icon name="ios-menu"></ion-icon>
-				</div>
-				<div class="lang">eng</div>
-				<div class="search">
-					<ion-icon name="ios-search"></ion-icon>
-				</div>
-			</nav>
-
-			<div class="media">
-				<ul>
-					<li>facebook</li>
-					<li>instagram</li>
-					<li>twitter</li>
-				</ul>
-			</div>
-
-			<div class="text">
-				<h1>
-					<span class="hidetext">toni&guy</span>
-				</h1>
-				<h2>duality</h2>
-				<h3>
-					<span class="hidetext">collection 2017 <br> duality</span>
-				</h3>
-				<p>
-					<span class="hidetext">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde quis, delectus facere
-						neque sunt commodi quae
-						culpa dolores doloribus magnam?
-					</span>
-				</p>
-			</div>
-
-			<div class="sponsor">
-				<img src="../../assets/images/pageSeven/sponsor-logo.png" alt="">
-				<p>official sponsor</p>
-			</div>
-
-
-		
-			<div class="distortion"></div>
-
-		</div>
 	</div>
 </template>
 
 <script setup lang="ts">
+import hoverEffect from 'hover-effect'
 
-
-  new hoverEffect({
-      parent: document.querySelector('.distortion'),
-      intensity: 0.2,
-      image1: './images/01.png',
-      image2: './images/02.png',
-      displacementImage: './images/diss.png',
-      imagesRatio: 380 / 300
-    })
+new hoverEffect({
+	parent: document.querySelector('.distortion'),
+	intensity: 0.2,
+	image1: '../../assets/images/pageSeven/01.png',
+	image2: '../../assets/images/pageSeven/02.png',
+	displacementImage: '../../assets/images/pageSeven/diss.png',
+	imagesRatio: 380 / 300
+})
 </script>
 
 <style scoped>
