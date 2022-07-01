@@ -1,6 +1,6 @@
 <template>
-	<div class="w-screen h-screen">
-		<div class="distortion"></div>
+	<div class="w-screen h-screen center">
+		<div class="distortion w-[580px] min-h-[720px] max-w-[96%]"></div>
 	</div>
 </template>
 
@@ -8,31 +8,18 @@
 import hoverEffect from 'hover-effect'
 import { onMounted } from 'vue'
 
-const img_1 = ''
-const img_2 = ''
-const diss = ''
-
+const img_1 = new URL('../../assets/images/pageSeven/01.png', import.meta.url) as any
+const img_2 = new URL('../../assets/images/pageSeven/02.png', import.meta.url) as any
+const diss = new URL('../../assets/images/pageSeven/diss.png', import.meta.url) as any
 onMounted(()=>{
 	new hoverEffect({
 		parent: document.querySelector('.distortion'),
 		intensity: 0.2,
-		image1: '../../assets/images/pageSeven/01.png',
-		image2: '../../assets/images/pageSeven/02.png',
-		displacementImage: '../../assets/images/pageSeven/diss.png',
+		image1: img_1.href,
+		image2: img_2.href,
+		displacementImage: diss.href,
 		imagesRatio: 380 / 300
 	})
 })
 
 </script>
-
-<style scoped>
-
-.distortion {
-  width: 580px;
-  height: 720px;
-  position: absolute;
-  right: 300px;
-  bottom: 0;
-}
-
-</style>
