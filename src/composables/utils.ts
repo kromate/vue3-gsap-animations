@@ -52,7 +52,7 @@ export const animationPageList = [
 	{
 		index: 9,
 		title: 'Animation Nine',
-		desc: '',
+		desc: 'An accordion-Kenburns-Mouse-Event animation',
 		link: '/animations/pageNine',
 	},
 	{
