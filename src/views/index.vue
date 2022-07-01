@@ -17,7 +17,7 @@
 
 		<div class="content bg-white  w-full px-5 text-center">
 			<h1 class="text-5xl font-bold uppercase mt-10 mb-4">Enjoy!</h1>
-			<p class="mb-16 w-[40rem] mx-auto">This is a collection of various GSAP animations found on the internet (GitHub/Codepen/Youtube) rewritten in vue3 and made responsive</p>
+			<p class="mb-16 w-[40rem] max-w-[100%] mx-auto">This is a collection of various GSAP animations found on the internet (GitHub/Codepen/Youtube) rewritten in vue3 and made responsive</p>
 			<div class="flex flex-wrap px-10 justify-center w-full mx-auto gap-8 gap-y-12 pb-12">
 				<router-link :to="n.link" class="card cardx" v-for="n in animationPageList" :key="n" target="_blank">
 					<span class="absolute text-3xl font-bold num -top-5 -right-5 uppercase transition-all duration-500">Animation - 0{{n.index}}</span>
