@@ -1,6 +1,6 @@
 <template>
 	<div class="w-screen h-screen center">
-		<div class="distortion w-[580px] min-h-[720px] max-w-[96%]"></div>
+		<div class="distortion w-[580px] min-h-[720px] max-w-[96%] border-2 border-black shadow-lg"></div>
 	</div>
 </template>
 
@@ -14,7 +14,7 @@ const diss = new URL('../../assets/images/pageSeven/diss.png', import.meta.url) 
 onMounted(()=>{
 	new hoverEffect({
 		parent: document.querySelector('.distortion'),
-		intensity: 0.2,
+		intensity: .25,
 		image1: img_1.href,
 		image2: img_2.href,
 		displacementImage: diss.href,
