@@ -104,15 +104,6 @@ onMounted(()=>{
 		0.6
 	)
 
-	t1.to(
-		'.top img',
-		{
-			ease: 'power1.inOut',
-			scale: 1.2,
-			yPercent: 40,
-		},
-		0.8
-	)
 
 	// Screen 1 Article Fetching 
 	t1.to(
@@ -200,7 +191,7 @@ onMounted(()=>{
 })
 </script>
 
-<style >
+<style scoped>
 /* *,
 *::after,
 *::before {
