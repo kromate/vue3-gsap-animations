@@ -61,6 +61,18 @@ export const animationPageList = [
 		desc: 'An animated mobile screen interaction ',
 		link: '/animations/pageTen',
 	},
+	{
+		index: 11,
+		title: 'Animation Eleven',
+		desc: 'A ScrollMagic and GSAP animation',
+		link: '/animations/pageEleven',
+	},
+	{
+		index: 12,
+		title: 'Animation Twelve',
+		desc: 'A circular Text animation',
+		link: '/animations/pageTwelve',
+	},
 ]
 
 

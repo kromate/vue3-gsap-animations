@@ -191,15 +191,7 @@ onMounted(()=>{
 })
 </script>
 
-<style scoped>
-/* *,
-*::after,
-*::before {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: inherit;
-	box-sizing: inherit;
-}
+<style>
 
 body {
 	-webkit-box-sizing: border-box;
@@ -207,9 +199,11 @@ body {
 	font-family: 'poppins', sans-serif;
 	line-height: 1.7;
 	position: relative;
-	background-color: #e7f1ee;
+	/* background-color: #cbdad6; */
 	height: 100vh;
-} */
+background-color: #5b6467;
+background-image: linear-gradient(315deg, #5b6467 0%, #8b939a 74%);
+}
 
 .container {
 	position: absolute;
@@ -224,6 +218,8 @@ body {
 	border-radius: 30px;
 	-webkit-box-shadow: 0px 56px 72px -30px rgba(81, 108, 95, 0.46);
 	box-shadow: 0px 56px 72px -30px rgba(81, 108, 95, 0.46);
+background-color: #b8c6db;
+background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .next-screen {

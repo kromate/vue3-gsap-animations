@@ -12,6 +12,8 @@
 		"@vueuse/core": "^8.7.5",
 		"gsap": "^3.10.4",
 		"hover-effect": "^1.1.0",
+		"scrollmagic": "^2.0.8",
+		"scrollmagic-plugin-gsap": "^1.0.4",
 		"scss": "^0.2.4",
 		"vue": "^3.2.25",
 		"vue-meta": "^3.0.0-alpha.10",
