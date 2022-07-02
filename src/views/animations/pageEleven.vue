@@ -1,5 +1,5 @@
 <template>
-	<div id="fullpage">
+	<div id="fullpage" class="pt-40">
 
 		<div class="section" id="section1">
 			<div class="contain">
@@ -50,8 +50,36 @@
 import * as ScrollMagic from 'scrollmagic' // Or use scrollmagic-with-ssr to avoid server rendering problems
 import { TweenMax, TimelineMax } from 'gsap' // Also works with TweenLite and TimelineLite
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
+import { onMounted } from 'vue'
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
+
+
+onMounted(()=>{
+	const controller = new ScrollMagic.Controller()
+
+	let scene = new ScrollMagic.Scene({
+		triggerElement: '#section2',
+        	duration: 500
+	})
+		.setTween('#bg img', {
+			maxWidth: '1200px',
+			top: '30%',
+			left: '80%',
+			opacity: 0.25
+		}) 
+		.addTo(controller)
+
+	 scene = new ScrollMagic.Scene({
+		triggerElement: '#section3',
+		duration: 300
+	})
+
+		.setTween('#bg img', {
+			top: '20%'
+		})
+		.addTo(controller)
+})
 </script>
 
 <style >
