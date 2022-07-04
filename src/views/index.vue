@@ -16,7 +16,15 @@
 		<div class="overlay-2 "></div>
 
 		<div class="content bg-white  w-full px-5 text-center">
-			<h1 class="text-5xl font-bold uppercase mt-10 mb-4">Enjoy!</h1>
+			<h1 class="text-5xl font-bold uppercase mt-10 mb-4 flex items-center justify-center flex-col">Enjoy!
+				<span class="flex gap-4 items-center mt-2 text-2xl ">
+					<a href="https://github.com/kromate/vue3-gsap-animations" target="_blank" rel="noopener noreferrer" class=" transition-all duration-500 hover:text-[#171515]"><i class="lab la-github"></i></a>
+					<a href="https://youtu.be/KJrymk0uKC4" target="_blank" rel="noopener noreferrer" class="transition-all duration-500 hover:text-[#e36868]"><i class="lab la-youtube "></i></a>
+					<a href="https://twitter.com/kromate_24" target="_blank" rel="noopener noreferrer" class="transition-all duration-500 hover:text-[#1DA1F2]"><i class="lab la-twitter "></i></a>
+				</span>
+	
+			</h1>
+
 			<p class="mb-16 w-[40rem] max-w-[100%] mx-auto">This is a collection of various GSAP animations found on the internet (GitHub/Codepen/Youtube) rewritten in vue3 and made responsive</p>
 			<div class="flex flex-wrap px-10 justify-center w-full mx-auto gap-8 gap-y-12 pb-12">
 				<router-link :to="n.link" class="card cardx" v-for="n in animationPageList" :key="n" target="_blank">
@@ -37,7 +45,8 @@ import { animationPageList } from '@/composables/utils'
 </script>
 
 <style scoped lang="scss">
-@import url('../assets/style/animation-styles/landingPage')
+@import url('../assets/style/animation-styles/landingPage');
+
 
 </style>
 

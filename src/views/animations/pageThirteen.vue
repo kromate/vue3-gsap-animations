@@ -1,7 +1,7 @@
 <template>
 	<div class="w-screen h-screen center">
-
-	</div>2
+Hi
+	</div>
 </template>
 
 <script setup lang="ts">

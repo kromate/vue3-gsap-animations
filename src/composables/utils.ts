@@ -79,6 +79,12 @@ export const animationPageList = [
 		desc: 'A circular Text animation',
 		link: '/animations/pageTwelve',
 	},
+	{
+		index: 13,
+		title: 'Animation Thirteen',
+		desc: 'A translating Y-axis text animation',
+		link: '/animations/pageThirteen',
+	},
 ]
 
 
