@@ -34,12 +34,16 @@
 <script setup lang="ts">
 import { fadeOut } from '@/assets/scripts/animation-scripts/landingPage'
 import { animationPageList } from '@/composables/utils'
-
-
-
 </script>
 
 <style scoped lang="scss">
 @import url('../assets/style/animation-styles/landingPage')
 
 </style>
+
+// Passion Project Nine - Vue3 Animations 
+
+// So I decided I need a solid open-source project on Vue 3 animations and so I searched the web for various web animation (mostly GSAP) and recreated them in Vue with responsiveness
+
+// Github:- https://github.com/kromate/vue3-gsap-animations
+// website:- https://vue3-animations.netlify.app/

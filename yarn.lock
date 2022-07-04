@@ -88,6 +88,20 @@
     estree-walker "^2.0.1"
     picomatch "^2.2.2"
 
+"@theatre/core@^0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@theatre/core/-/core-0.4.7.tgz#2c0537c57dd983f170ba3ec9b2f83885bbfba127"
+  integrity sha512-Dy66AX3yfJWW2xTzhRZBko9r0LB9XS8CO0eDv75fVbDcMnYl7NVZGy5OU7nG0nB8cElE1HniNQHN9g4kaZ2EzQ==
+  dependencies:
+    "@theatre/dataverse" "0.4.7"
+
+"@theatre/dataverse@0.4.7":
+  version "0.4.7"
+  resolved "https://registry.yarnpkg.com/@theatre/dataverse/-/dataverse-0.4.7.tgz#237ef20764a8ec0879a58b62550cbe8a568f7543"
+  integrity sha512-rNs9K6kiJSJ9i+WwQcxRa2p3bKzcRS2gWpK6MmZH0JqgFdGRmosgkYNr+vrD/DHYDY69laAHdPYLRepjcDST9w==
+  dependencies:
+    lodash-es "^4.17.21"
+
 "@types/debug@^4.1.7":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -1624,6 +1638,11 @@ local-pkg@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/local-pkg/-/local-pkg-0.4.1.tgz#e7b0d7aa0b9c498a1110a5ac5b00ba66ef38cfff"
   integrity sha512-lL87ytIGP2FU5PWwNDo0w3WhIo2gopIAxPg9RxDYF7m4rr5ahuZxP22xnJHIvaLTe4Z9P6uKKY2UHiwyB4pcrw==
+
+lodash-es@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.21.tgz#43e626c46e6591b7750beb2b50117390c609e3ee"
+  integrity sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==
 
 lodash.merge@^4.6.2:
   version "4.6.2"
