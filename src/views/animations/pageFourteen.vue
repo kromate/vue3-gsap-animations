@@ -2,7 +2,9 @@
 	<div class="cursor-preview">
 		<div class="cursor-preview__container">
 			<h5 class="cursor-preview__title">On link</h5>
-			<a href="https://zelen-co.com/articles/custom-cursor-in-vuejs-with-gsap" target="blank" class="cursor-preview__link">github</a>
+			<a href="https://github.com/kromate/vue3-gsap-animations" target="blank" class="cursor-preview__link">Github</a>
+
+			<br> <br> <br>
 			<h5 class="cursor-preview__title">On hoverable element</h5>
 			<button class="cursor-preview__button cursor-hover">Hover me</button>
 		</div>
@@ -88,7 +90,7 @@ onMounted(()=>{
   .cursor-preview__title {
     font-size: 20px;
     line-height: 24px;
-    color: #8a9eff;
+    color: #8696ea;
     margin-bottom: 5px;
   }
   
@@ -103,7 +105,7 @@ onMounted(()=>{
     background: #78fff1;
     border-radius: 5px;
     padding: 16px 50px;
-    color: #fff;
+    color: rgb(48, 37, 37);
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
