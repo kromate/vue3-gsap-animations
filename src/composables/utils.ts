@@ -85,6 +85,12 @@ export const animationPageList = [
 		desc: 'A translating Y-axis text animation',
 		link: '/animations/pageThirteen',
 	},
+	{
+		index: 14,
+		title: 'Animation Thirteen',
+		desc: 'implemntation of Cuberto mouse follower',
+		link: '/animations/pageFourteen',
+	},
 ]
 
 
