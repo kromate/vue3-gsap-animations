@@ -8,7 +8,7 @@ const router = createRouter({
 		...routes,
 		{
 			path: '/:catchAll(.*)',
-			component: () => import('../views/index.vue'),
+			component: () => import('../views/404.vue'),
 		},
 	],
 })
