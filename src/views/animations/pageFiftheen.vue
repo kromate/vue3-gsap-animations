@@ -6,6 +6,8 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Fiftheen')
 
 onMounted(()=>{
 	(function(){
