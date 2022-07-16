@@ -51,6 +51,8 @@ import * as ScrollMagic from 'scrollmagic' // Or use scrollmagic-with-ssr to avo
 import { TweenMax, TimelineMax } from 'gsap' // Also works with TweenLite and TimelineLite
 import { ScrollMagicPluginGsap } from 'scrollmagic-plugin-gsap'
 import { onMounted } from 'vue'
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Eleven')
 
 ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax)
 
