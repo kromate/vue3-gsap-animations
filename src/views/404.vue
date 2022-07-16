@@ -11,7 +11,7 @@
 		<div></div>
 		<div></div>
 	</div>
-	<div class="caps"><img src="http://ademilter.com/caps.png" alt=""></div>
+	<div class="caps"></div>
 	<canvas id="canvas"></canvas>
 </template>
 
@@ -19,39 +19,35 @@
 import { onMounted } from 'vue'
 
 onMounted(()=>{
-	const Application = ( function () {
-		let canvas, ctx:any, imgData:any, pix, WIDTH, HEIGHT,flickerInterval
+	let canvas, ctx:any, imgData:any, pix, WIDTH, HEIGHT,flickerInterval
 		
-
-		const init = function () {
-			canvas = document.getElementById('canvas') as HTMLCanvasElement
-			ctx = canvas.getContext('2d')
-			canvas.width = WIDTH = 700
-			canvas.height = HEIGHT = 500
-			ctx.fillStyle = 'white'
-			ctx.fillRect(0, 0, WIDTH, HEIGHT)
-			ctx.fill()
-			imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT)
-			pix = imgData.data
-			flickerInterval = setInterval(flickering, 30)
+	const flickering = function () {
+		for (let i = 0; i < pix.length; i += 4) {
+			const color = (Math.random() * 255) + 50
+			pix[i] = color
+			pix[i + 1] = color
+			pix[i + 2] = color
 		}
+		ctx.putImageData(imgData, 0, 0)
+	}
+	const init = function () {
+		canvas = document.getElementById('canvas') as HTMLCanvasElement
+		ctx = canvas.getContext('2d')
+		canvas.width = WIDTH = 700
+		canvas.height = HEIGHT = 500
+		ctx.fillStyle = 'white'
+		ctx.fillRect(0, 0, WIDTH, HEIGHT)
+		ctx.fill()
+		imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT)
+		pix = imgData.data
+		flickerInterval = setInterval(flickering, 30)
+	}()
 
-		const flickering = function () {
-			for (let i = 0; i < pix.length; i += 4) {
-				const color = (Math.random() * 255) + 50
-				pix[i] = color
-				pix[i + 1] = color
-				pix[i + 2] = color
-			}
-			ctx.putImageData(imgData, 0, 0)
-		}
+	
 
-		return {
-			init: init
-		}
-	}())
 
-	Application.init()
+
+
 })
 </script>
 
