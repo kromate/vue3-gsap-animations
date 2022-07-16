@@ -17,7 +17,8 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue'
-
+import { setTitle } from '@/composables/utils'
+setTitle('404 | Page not Found')
 onMounted(()=>{
 	let canvas, ctx:any, imgData:any, pix, WIDTH, HEIGHT,flickerInterval
 		
