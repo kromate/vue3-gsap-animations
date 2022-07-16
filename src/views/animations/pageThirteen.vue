@@ -18,7 +18,10 @@
 	</div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { setTitle } from '@/composables/utils'
+setTitle('Animation Thirteen')
+</script>
 
 <style>
 .animtaion-content {
