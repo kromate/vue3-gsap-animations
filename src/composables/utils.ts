@@ -87,9 +87,15 @@ export const animationPageList = [
 	},
 	{
 		index: 14,
-		title: 'Animation Thirteen',
+		title: 'Animation Fourteen',
 		desc: 'implemntation of Cuberto mouse follower',
 		link: '/animations/pageFourteen',
+	},
+	{
+		index: 15,
+		title: 'Animation Fiftheen',
+		desc: 'Creepy Eyes animation',
+		link: '/animations/pageFiftheen',
 	},
 ]
 
