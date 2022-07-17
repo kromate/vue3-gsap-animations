@@ -1,5 +1,5 @@
 <template>
-	<div class="fof">
+	<div class="fof h-screen w-screen fixed inset-0">
 		<canvas></canvas>
 	</div>
 </template>
@@ -16,20 +16,16 @@ onMounted(()=>{
 			DISPLAY_HEIGHT = window.innerHeight,
 			DISPLAY_DURATION = 10
 	
-		let	mouse = { x: 0, y: 0 },
-			container,
-			canvas,
-			context,
-			startTime,
-			eyes
+		const	mouse = { x: 0, y: 0 }
+		let container, canvas, context:any,	startTime:any,	eyes:any
 	
 		function initialize() {
 			container = document.querySelector( '.fof' )
-			canvas = document.querySelector( '.fof>canvas' )
+			canvas = document.querySelector( '.fof>canvas' ) as HTMLCanvasElement
 		
 			if( canvas ) {
 				canvas.width = DISPLAY_WIDTH
-				canvas.height = DISPLAY_HEIGHT
+				canvas.height = (DISPLAY_HEIGHT)
 			
 				context = canvas.getContext( '2d' )
 			
@@ -59,7 +55,7 @@ onMounted(()=>{
 					new Eye( canvas,   0.55, 0.84,   0.87,    0.50 ), 
         
 					new Eye( canvas,   0.50, 0.50,   5.00,    0.10 ),
-				]
+				] as any
 			
 				startTime = Date.now()
 			
@@ -94,6 +90,7 @@ onMounted(()=>{
 
 
 	function Eye( canvas, x, y, scale, time ) {
+
 		this.canvas = canvas
 		this.context = this.canvas.getContext( '2d' )
 	
@@ -208,7 +205,7 @@ onMounted(()=>{
 			this.context.translate(this.iris.x*0.1,0)
 			this.context.scale(0.9,1)
 			this.context.strokeStyle = 'rgba(0,0,0,0.5)'
-			this.context.fillStyle = 'rgba(130,50,90,0.9)'
+			this.context.fillStyle = 'rgba(120,20,90,0.9)'
 			this.context.lineWidth = 2
 			this.context.beginPath()
 			this.context.arc(this.iris.x, this.iris.y, this.iris.size, 0, Math.PI*2, true)
@@ -225,7 +222,7 @@ onMounted(()=>{
 			this.context.globalCompositeOperation = 'source-atop'
 			this.context.translate(this.iris.x*0.1,0)
 			this.context.scale(0.9,1)
-			this.context.fillStyle = 'rgba(255,255,255,0.2)'
+			this.context.fillStyle = 'rgba(255,0,0,0.5)'
 			this.context.beginPath()
 			this.context.arc(this.iris.x, this.iris.y, this.iris.size * 0.7, 0, Math.PI*2, true)
 			this.context.fill()
@@ -282,9 +279,6 @@ body {
   overflow: hidden;
 }
 
-.fof {
-  margin: 10px 0;
-}
 
 .fof canvas,
 .fof img {
