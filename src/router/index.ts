@@ -8,17 +8,17 @@ export const setupRouter = async () => {
 		routes: [
 			...routesArr,
 			{
+				name: 'Error',
 				path: '/:catchAll(.*)',
 				component: () => import('../views/404.vue'),
 			},
 		],
 	})
 
-	router.afterEach(() => {
-		window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
-	})
-
 	return router
 }
+// router.afterEach(() => {
+// 	window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+// })
 
 export const router = setupRouter()

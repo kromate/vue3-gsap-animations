@@ -8,7 +8,6 @@ export default defineConfig({
 	plugins: [
 		// eslintPlugin(),
 		vue(),
-
 	],
 	resolve: {
 		alias: {

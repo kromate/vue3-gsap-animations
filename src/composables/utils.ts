@@ -97,6 +97,12 @@ export const animationPageList = [
 		desc: 'Creepy Eyes animation',
 		link: '/animations/pageFiftheen',
 	},
+	{
+		index: 16,
+		title: 'Animation Sixteen',
+		desc: 'Glowing background animation',
+		link: '/animations/pageSixteen',
+	},
 ]
 
 
