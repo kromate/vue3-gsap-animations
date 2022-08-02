@@ -13,7 +13,6 @@
 		"@vueuse/core": "^8.7.5",
 		"gsap": "^3.10.4",
 		"hover-effect": "^1.1.0",
-		"mouse-follower": "^1.1.2",
 		"scrollmagic": "^2.0.8",
 		"scrollmagic-plugin-gsap": "^1.0.4",
 		"scss": "^0.2.4",
